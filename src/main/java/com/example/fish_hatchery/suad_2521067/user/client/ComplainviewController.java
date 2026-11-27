@@ -2,32 +2,34 @@ package com.example.fish_hatchery.suad_2521067.user.client;
 
 import javafx.scene.control.*;
 
+import java.time.LocalDate;
+
 public class ComplainviewController
 {
     @javafx.fxml.FXML
-    private ComboBox issueCategoryComboBox;
+    private ComboBox<Complain> issueCategoryComboBox;
     @javafx.fxml.FXML
-    private TableColumn speciesNameCol;
+    private TableColumn<Complain, String> speciesNameCol;
     @javafx.fxml.FXML
-    private TableColumn complainIdCol;
+    private TableColumn<Complain, String> complainIdCol;
     @javafx.fxml.FXML
     private TextField complainIDTextField;
     @javafx.fxml.FXML
-    private ComboBox orderIdComboBox;
+    private ComboBox<Complain> orderIdComboBox;
     @javafx.fxml.FXML
     private Label buyerIdLabel;
     @javafx.fxml.FXML
     private Label issueCategoryLabel;
     @javafx.fxml.FXML
-    private TableColumn descriptionCol;
+    private TableColumn<Complain, String> descriptionCol;
     @javafx.fxml.FXML
-    private TableColumn buyerIdCol;
+    private TableColumn<Complain, String> buyerIdCol;
     @javafx.fxml.FXML
     private Label orderIdLabel;
     @javafx.fxml.FXML
     private Label affectedQuantityLabel;
     @javafx.fxml.FXML
-    private TableColumn issueCategoryCol;
+    private TableColumn<Complain, String> issueCategoryCol;
     @javafx.fxml.FXML
     private Label speciesNameLabel;
     @javafx.fxml.FXML
@@ -39,7 +41,7 @@ public class ComplainviewController
     @javafx.fxml.FXML
     private TextArea descriptionTextArea;
     @javafx.fxml.FXML
-    private TableView tableView;
+    private TableView<Complain> tableView;
     @javafx.fxml.FXML
     private TextField affectedQuantityTextField;
     @javafx.fxml.FXML
@@ -47,11 +49,11 @@ public class ComplainviewController
     @javafx.fxml.FXML
     private Label complainLabel;
     @javafx.fxml.FXML
-    private TableColumn orderIdCol;
+    private TableColumn<Complain, String> orderIdCol;
     @javafx.fxml.FXML
-    private TableColumn affectedQuantityCol;
+    private TableColumn<Complain, Integer> affectedQuantityCol;
     @javafx.fxml.FXML
-    private TableColumn complaintDateCol;
+    private TableColumn<Complain, LocalDate> complaintDateCol;
     @javafx.fxml.FXML
     private DatePicker complaintDatePicker;
 
