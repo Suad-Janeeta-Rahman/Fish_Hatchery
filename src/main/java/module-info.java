@@ -4,5 +4,7 @@ module com.example.fish_hatchery {
 
 
     opens com.example.fish_hatchery to javafx.fxml;
+    opens com.example.fish_hatchery.ridwan_2412433.user.hatchery_manager to javafx.fxml, javafx.base;
     exports com.example.fish_hatchery;
+    exports com.example.fish_hatchery.ridwan_2412433.user.hatchery_manager;
 }

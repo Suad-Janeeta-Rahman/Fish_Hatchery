@@ -1,8 +1,13 @@
 package com.example.fish_hatchery.ridwan_2412433.user.hatchery_manager;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -84,17 +89,26 @@ public class FarmDashboardController
         farmStatusLabel.setText("Farm Status: " + data.getFarmStatus());
     }
 
-    @javafx.fxml.FXML
-    public void feedInventoryButtonOA(ActionEvent actionEvent) {
-
+    private void switchScene(ActionEvent event, String fxmlFileName) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource(fxmlFileName));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void diseaseReportsButtonOA(ActionEvent actionEvent) {
+    public void feedInventoryButtonOA(ActionEvent actionEvent) throws IOException {
+        switchScene(actionEvent, "feedInventoryView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void fishStockButtonOA(ActionEvent actionEvent) {
+    public void diseaseReportsButtonOA(ActionEvent actionEvent) throws IOException {
+        switchScene(actionEvent, "diseaseReportsView.fxml");
+    }
+
+    @javafx.fxml.FXML
+    public void fishStockButtonOA(ActionEvent actionEvent) throws IOException {
+        switchScene(actionEvent, "fishStockView.fxml");
     }
 
     @javafx.fxml.FXML
@@ -136,7 +150,6 @@ public class FarmDashboardController
 
         ArrayList<FarmDashboard> filteredList = new ArrayList<>();
 
-        // for লুপ চালিয়ে ফিল্টার করা
         for (FarmDashboard item : dashboardList) {
             if (onlyCritical) {
                 if (item.getFarmStatus().equals("Critical")) {
@@ -154,11 +167,13 @@ public class FarmDashboardController
     }
 
     @javafx.fxml.FXML
-    public void farmDecisionButtonOA(ActionEvent actionEvent) {
+    public void farmDecisionButtonOA(ActionEvent actionEvent) throws IOException {
+        switchScene(actionEvent, "farmDecisionView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void waterQualityButtonOA(ActionEvent actionEvent) {
+    public void waterQualityButtonOA(ActionEvent actionEvent) throws IOException {
+        switchScene(actionEvent, "waterQualityView.fxml");
     }
 
     @javafx.fxml.FXML
@@ -192,7 +207,6 @@ public class FarmDashboardController
 
         String status = inputStatusComboBox.getValue();
 
-        // আগে থেকে ফাইল থাকলে আগের ডাটা লিস্টে নেওয়া
         File file = new File(FILE_NAME);
         if (file.exists()) {
             FileInputStream fis = new FileInputStream(file);
@@ -202,7 +216,6 @@ public class FarmDashboardController
             fis.close();
         }
 
-        // নতুন অবজেক্ট তৈরি করে লিস্ট ও ফাইলে সেভ করা
         FarmDashboard newRecord = new FarmDashboard(ponds, fish, batches, mortality, status);
         dashboardList.add(newRecord);
 
@@ -212,7 +225,6 @@ public class FarmDashboardController
         oos.close();
         fos.close();
 
-        // শুধু লেবেল আপডেট ও ইনপুট ক্লিয়ার করা (TableView-তে দেখাবে না)
         updateSummaryLabels(newRecord);
 
         totalPondsTextField.clear();
@@ -225,11 +237,13 @@ public class FarmDashboardController
     }
 
     @javafx.fxml.FXML
-    public void productionStatsButtonOA(ActionEvent actionEvent) {
+    public void productionStatsButtonOA(ActionEvent actionEvent) throws IOException {
+        switchScene(actionEvent, "productionStatisticsView.fxml");
     }
 
     @javafx.fxml.FXML
-    public void operationsButtonOA(ActionEvent actionEvent) {
+    public void operationsButtonOA(ActionEvent actionEvent) throws IOException {
+        switchScene(actionEvent, "hatcheryOperationsView.fxml");
     }
 
     @javafx.fxml.FXML
