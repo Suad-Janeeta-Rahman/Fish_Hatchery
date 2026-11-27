@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="672.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.suad_2521067.user.client.OrderHistoryviewController">
+   <children>
+      <Label fx:id="orderHistoryFilter" layoutX="332.0" layoutY="37.0" text="ORDER HISTORY">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="55.0" layoutY="189.0" prefHeight="385.0" prefWidth="807.0">
+        <columns>
+          <TableColumn fx:id="speciesNameCol" prefWidth="245.5999984741211" text="Species Name" />
+          <TableColumn fx:id="quantityCol" prefWidth="123.20001220703125" text="Quantity" />
+            <TableColumn fx:id="amountCol" prefWidth="185.60000610351562" text="Amount" />
+            <TableColumn fx:id="dateCol" prefWidth="254.39996337890625" text="Date" />
+            <TableColumn prefWidth="185.60000610351562" text="Amount" />
+        </columns>
+      </TableView>
+      <Button layoutX="433.0" layoutY="604.0" mnemonicParsing="false" onAction="#backToDashboardMouseClick" text="Back to Dashboard" />
+      <Button layoutX="775.0" layoutY="137.0" mnemonicParsing="false" onAction="#clearMiuseClick" text="Clear" />
+      <ComboBox fx:id="speciesNameComboBox" layoutX="75.0" layoutY="85.0" prefWidth="150.0" promptText="Species Filter" />
+   </children>
+</AnchorPane>

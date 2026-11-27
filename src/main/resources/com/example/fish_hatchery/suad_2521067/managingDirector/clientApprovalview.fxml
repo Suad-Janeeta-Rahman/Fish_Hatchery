@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="624.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.suad_2521067.user.managingDirector.ClientApprovalviewController">
+   <children>
+      <Label fx:id="clientApprovedLabel" layoutX="355.0" layoutY="38.0" text="CLIENT APPROVED">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="205.0" />
+      <Label fx:id="districtLabel" layoutX="73.0" layoutY="161.0" text="District:" />
+      <Label fx:id="phoneLabel" layoutX="73.0" layoutY="119.0" text="Phone:" />
+      <Label fx:id="nameLabel" layoutX="73.0" layoutY="89.0" text="Name:" />
+      <CheckBox fx:id="approvedCheckBox" layoutX="153.0" layoutY="214.0" mnemonicParsing="false" text="Approved" />
+      <TextField fx:id="nameTextField" layoutX="153.0" layoutY="85.0" />
+      <TextField fx:id="phoneTextField" layoutX="154.0" layoutY="124.0" />
+      <ComboBox fx:id="districtTextField" layoutX="153.0" layoutY="166.0" prefWidth="150.0" />
+      <TableView fx:id="tableView" layoutX="36.0" layoutY="271.0" prefHeight="262.0" prefWidth="848.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="273.5999870300293" text="Name" />
+          <TableColumn fx:id="phoneCol" prefWidth="166.39999389648438" text="Phone" />
+            <TableColumn fx:id="districtCol" prefWidth="185.60003662109375" text="District" />
+            <TableColumn fx:id="approvedCol" prefWidth="222.40008544921875" text="Approved" />
+        </columns>
+      </TableView>
+      <Button layoutX="530.0" layoutY="112.0" mnemonicParsing="false" onAction="#addMouseClick" text="Add" />
+      <Button layoutX="434.0" layoutY="558.0" mnemonicParsing="false" onAction="#backToDashboardMouseClick" text="Back to Dashboard" />
+      <Button layoutX="778.0" layoutY="219.0" mnemonicParsing="false" onAction="#clearMouseClick" text="Clear" />
+   </children>
+</AnchorPane>
