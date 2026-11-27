@@ -5,20 +5,22 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
+import java.time.LocalDate;
+
 public class OrderHistoryviewController
 {
     @javafx.fxml.FXML
-    private TableColumn speciesNameCol;
+    private TableColumn<OrderHistory, String> speciesNameCol;
     @javafx.fxml.FXML
-    private TableColumn amountCol;
+    private TableColumn<OrderHistory, Float> amountCol;
     @javafx.fxml.FXML
-    private TableColumn dateCol;
+    private TableColumn<OrderHistory, LocalDate> dateCol;
     @javafx.fxml.FXML
-    private TableColumn quantityCol;
+    private TableColumn<OrderHistory, Integer> quantityCol;
     @javafx.fxml.FXML
-    private TableView tableView;
+    private TableView<OrderHistory> tableView;
     @javafx.fxml.FXML
-    private ComboBox speciesNameComboBox;
+    private ComboBox<OrderHistory> speciesNameComboBox;
     @javafx.fxml.FXML
     private Label orderHistoryFilter;
 
