@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="668.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.suad_2521067.user.Client.RatingviewController">
+   <children>
+      <Label fx:id="ratingLabel" layoutX="389.0" layoutY="36.0" text="Rating">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ratingIIdLabel" layoutX="32.0" layoutY="102.0" text="Rating ID:" />
+      <Label fx:id="speciesNameLabel" layoutX="34.0" layoutY="199.0" text="Species Name:" />
+      <Label fx:id="buyerIdlabel" layoutX="34.0" layoutY="174.0" text="Buyer ID:" />
+      <Label fx:id="orderIdLabel" layoutX="34.0" layoutY="129.0" text="Order ID:" />
+      <TextField fx:id="ratingIIdTextField" layoutX="134.0" layoutY="89.0" />
+      <TextField fx:id="buyerIdTextField" layoutX="134.0" layoutY="161.0" />
+      <TextField fx:id="speciesNameTextField" layoutX="133.0" layoutY="195.0" />
+      <ComboBox fx:id="orderIdComboBox" layoutX="133.0" layoutY="125.0" prefWidth="150.0" />
+      <Label fx:id="ratingDateLabel" layoutX="29.0" layoutY="297.0" text="Rating Date:" />
+      <Label fx:id="survivalQualityLabel" layoutX="34.0" layoutY="254.0" text="Survival Quality:" />
+      <Label fx:id="starRatinglabel" layoutX="32.0" layoutY="227.0" text="Star Rating:" />
+      <ComboBox fx:id="starRatingComboBox" layoutX="133.0" layoutY="223.0" prefWidth="150.0" />
+      <ComboBox fx:id="survivalQualityComboBox" layoutX="133.0" layoutY="259.0" prefWidth="150.0" />
+      <DatePicker fx:id="ratingDatePicker" layoutX="121.0" layoutY="293.0" />
+      <TableView fx:id="tableView" layoutX="19.0" layoutY="364.0" prefHeight="243.0" prefWidth="842.0">
+        <columns>
+          <TableColumn fx:id="ratingIdCol" prefWidth="112.80001258850098" text="Rating ID" />
+          <TableColumn fx:id="orderIdCol" prefWidth="105.60003662109375" text="Order ID" />
+            <TableColumn fx:id="buyerIdCol" prefWidth="96.79998779296875" text="Buyer ID" />
+            <TableColumn fx:id="speciedNameCol" prefWidth="164.79998779296875" text="Species Name" />
+            <TableColumn fx:id="starRatingCol" prefWidth="118.40005493164062" text="Star Rating" />
+            <TableColumn fx:id="survivalQualityCol" prefWidth="110.4000244140625" text="Survival Quality" />
+            <TableColumn fx:id="ratingDateCol" prefWidth="140.0001220703125" text="Rating Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="499.0" layoutY="113.0" mnemonicParsing="false" onAction="#submitRatingMouseClick" text="Submit Rating" />
+      <Button layoutX="380.0" layoutY="613.0" mnemonicParsing="false" onAction="#backToDashboardMouseClick" text="Back to Dashboard" />
+      <Button layoutX="694.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearMouseClick" text="Clear" />
+   </children>
+</AnchorPane>
