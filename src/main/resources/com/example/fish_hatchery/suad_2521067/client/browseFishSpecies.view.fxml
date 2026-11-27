@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="671.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.suad_2521067.user.client.BrowseFishSpeciesviewController">
+   <children>
+      <Label fx:id="speciesIdLabel" layoutX="20.0" layoutY="77.0" prefHeight="17.0" prefWidth="58.0" text="Species ID:" />
+      <TextField fx:id="speciesidtextField" layoutX="99.0" layoutY="73.0" />
+      <Label fx:id="availableSizeLabel" layoutX="9.0" layoutY="140.0" prefHeight="18.0" prefWidth="81.0" text="available Size" />
+      <Label fx:id="speciesNameLabel" layoutX="8.0" layoutY="105.0" prefHeight="18.0" prefWidth="82.0" text="Species Name:" />
+      <TextField fx:id="availableSizetextField" layoutX="98.0" layoutY="137.0" />
+      <Label fx:id="priceLabel" layoutX="32.0" layoutY="179.0" prefHeight="17.0" prefWidth="58.0" text="Price:" />
+      <TextField fx:id="priceTextField" layoutX="98.0" layoutY="175.0" />
+      <ComboBox fx:id="speciesNameCombobox" layoutX="98.0" layoutY="102.0" prefWidth="150.0" />
+      <CheckBox fx:id="isAvailableCheckBox" layoutX="100.0" layoutY="201.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="188.0" text="isAvailable" />
+      <TableView fx:id="tableview" layoutX="10.0" layoutY="255.0" prefHeight="339.0" prefWidth="866.0">
+        <columns>
+          <TableColumn fx:id="speciesIdCol" prefWidth="168.7999849319458" text="Species ID" />
+          <TableColumn fx:id="speciesnameCol" prefWidth="146.40000915527344" text="Species Name" />
+            <TableColumn fx:id="availableSizeCol" prefWidth="157.5999755859375" text="Available Size" />
+            <TableColumn fx:id="priceCol" prefWidth="188.800048828125" text="Price" />
+            <TableColumn fx:id="isAvailablecol" prefWidth="205.60009765625" text="is Available" />
+        </columns>
+      </TableView>
+      <Button layoutX="391.0" layoutY="124.0" mnemonicParsing="false" onAction="#searchMouseClick" text="Search" />
+      <Button layoutX="379.0" layoutY="611.0" mnemonicParsing="false" onAction="#backToDashboardMouseClick" text="Back to Dashboard" />
+      <Label fx:id="browseFishLabel" layoutX="312.0" layoutY="26.0" prefHeight="50.0" prefWidth="209.0" text="BROWSE FISH">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

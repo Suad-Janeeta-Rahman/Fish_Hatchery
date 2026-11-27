@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="665.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.suad_2521067.user.managingDirector.ProfitReportviewController">
+   <children>
+      <Label fx:id="profitReportLabel" layoutX="337.0" layoutY="40.0" text="PROFIT REPORT">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="profitLabel" layoutX="506.0" layoutY="104.0" prefHeight="55.0" prefWidth="231.0" text="Profit:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="expenseLabel" layoutX="52.0" layoutY="172.0" text="Expense:" />
+      <Label fx:id="revenueLabel" layoutX="52.0" layoutY="132.0" text="Revenue:" />
+      <Label fx:id="monthLabel" layoutX="52.0" layoutY="92.0" text="Month:" />
+      <ComboBox fx:id="monthComboBox" layoutX="129.0" layoutY="88.0" prefWidth="150.0" />
+      <TextField fx:id="revenueTextField" layoutX="130.0" layoutY="128.0" />
+      <TextField fx:id="exepenseTextFiled" layoutX="129.0" layoutY="168.0" />
+      <TableView fx:id="tableView" layoutX="28.0" layoutY="323.0" prefHeight="285.0" prefWidth="794.0">
+        <columns>
+          <TableColumn fx:id="monthCol" prefWidth="200.0000057220459" text="Month" />
+          <TableColumn fx:id="revenueCol" prefWidth="169.5999755859375" text="Revenue" />
+            <TableColumn fx:id="expenseCol" prefWidth="205.59994506835938" text="Expense" />
+            <TableColumn fx:id="profitCol" prefWidth="220.0" text="Profit" />
+        </columns>
+      </TableView>
+      <Button layoutX="353.0" layoutY="128.0" mnemonicParsing="false" onAction="#addMouseClick" text="Add" />
+      <Button layoutX="395.0" layoutY="619.0" mnemonicParsing="false" onAction="#backToDashboard" text="Back to Dashboard" />
+      <Button layoutX="737.0" layoutY="263.0" mnemonicParsing="false" onAction="#ClearMouseClick" text="Clearn" />
+   </children>
+</AnchorPane>
