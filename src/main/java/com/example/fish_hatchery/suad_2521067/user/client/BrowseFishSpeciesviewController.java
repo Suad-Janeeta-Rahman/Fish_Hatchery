@@ -1,5 +1,7 @@
 package com.example.fish_hatchery.suad_2521067.user.client;
 
+import javafx.scene.control.*;
+
 public class BrowseFishSpeciesviewController
 {
     @javafx.fxml.FXML

@@ -1,5 +1,7 @@
 package com.example.fish_hatchery.suad_2521067.user.managingDirector;
 
+import javafx.scene.control.*;
+
 public class ClientApprovalviewController
 {
     @javafx.fxml.FXML
