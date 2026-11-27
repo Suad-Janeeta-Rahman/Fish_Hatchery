@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="644.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.suad_2521067.user.Client.OrderModificationviewController">
+   <children>
+      <Label fx:id="orderModificationLabel" layoutX="334.0" layoutY="44.0" text="ORDER MODIFICATION">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="modivficationIdLabel" layoutX="31.0" layoutY="110.0" text="Modivfication ID:" />
+      <Label fx:id="modivficationTypeLabel" layoutX="18.0" layoutY="229.0" text="Modivfication Type:" />
+      <Label fx:id="speciesNameLabel" layoutX="31.0" layoutY="198.0" text="Species Name:" />
+      <Label fx:id="buyerIdLabel" layoutX="31.0" layoutY="168.0" text="Buyer ID:" />
+      <Label fx:id="orderIdLabel" layoutX="31.0" layoutY="139.0" text="Order ID:" />
+      <TextField fx:id="modivficationIdTextField" layoutX="134.0" layoutY="106.0" />
+      <ComboBox fx:id="orderIdComboBox" layoutX="134.0" layoutY="135.0" prefWidth="150.0" />
+      <TextField fx:id="buyerIdTextField" layoutX="134.0" layoutY="164.0" />
+      <TextField fx:id="speciesNameTextField" layoutX="134.0" layoutY="194.0" />
+      <ComboBox fx:id="modivficationTypeComboBox" layoutX="134.0" layoutY="225.0" prefWidth="150.0" />
+      <Label fx:id="newDeliveryDateLabel" layoutX="18.0" layoutY="291.0" text="New Delivery Date" />
+      <Label fx:id="newQuantityLabel" layoutX="18.0" layoutY="263.0" text="New Quantity" />
+      <DatePicker fx:id="newDeliveryDatePicker" layoutX="134.0" layoutY="287.0" />
+      <TextField fx:id="newQuantityTextField" layoutX="134.0" layoutY="259.0" />
+      <Label fx:id="approvalStatusLabel" layoutX="24.0" layoutY="326.0" text="Approval Status:" />
+      <TextArea fx:id="reasonTextArea" layoutX="510.0" layoutY="107.0" prefHeight="200.0" prefWidth="200.0" text="Reason" />
+      <TextField fx:id="approvalStatusTextField" layoutX="134.0" layoutY="322.0" />
+      <TableView fx:id="tableView" layoutX="9.0" layoutY="367.0" prefHeight="219.0" prefWidth="894.0">
+        <columns>
+          <TableColumn fx:id="modivficationIdCol" prefWidth="104.79998207092285" text="Modivfication ID" />
+          <TableColumn fx:id="orderIdCol" prefWidth="72.79991912841797" text="Order ID" />
+            <TableColumn fx:id="buyerIdCol" prefWidth="64.800048828125" text="Buyer ID" />
+            <TableColumn fx:id="speciesNameCol" prefWidth="88.00006103515625" text="Species Name" />
+            <TableColumn fx:id="modificationTypeCol" prefWidth="126.39996337890625" text="Modivfication Type" />
+            <TableColumn fx:id="newQuantityCol" prefWidth="112.80001831054688" text="New Quantity" />
+            <TableColumn fx:id="newDeliveryDate" prefWidth="134.4000244140625" text="New Delivery Date" />
+            <TableColumn fx:id="approvalDateCol" prefWidth="109.60003662109375" text="Approval Status" />
+            <TableColumn fx:id="reasonCol" prefWidth="92.7999267578125" text="Reason" />
+        </columns>
+      </TableView>
+      <Button layoutX="351.0" layoutY="194.0" mnemonicParsing="false" onAction="#submitMouseClick" text="Submit" />
+      <Button layoutX="770.0" layoutY="322.0" mnemonicParsing="false" onAction="#clearMouseClick" text="Clear" />
+      <Button layoutX="378.0" layoutY="595.0" mnemonicParsing="false" onAction="#backToDashboardMouseClick" text="Back to Dashboard" />
+   </children>
+</AnchorPane>

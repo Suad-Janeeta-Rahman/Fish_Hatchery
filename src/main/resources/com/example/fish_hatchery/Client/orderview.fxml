@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="662.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.suad_2521067.user.Client.orderviewController">
+   <children>
+      <Label fx:id="batchIdLabel" layoutX="15.0" layoutY="152.0" text="Batch ID:" />
+      <ComboBox fx:id="speciesNameComboBox" layoutX="102.0" layoutY="178.0" prefWidth="150.0" />
+      <ComboBox fx:id="batchIdComboBox" layoutX="102.0" layoutY="148.0" prefWidth="150.0" />
+      <Label fx:id="speciesName" layoutX="15.0" layoutY="182.0" prefHeight="18.0" prefWidth="97.0" text="Species Name:" />
+      <Label fx:id="orderQuantityLabel" layoutX="15.0" layoutY="212.0" prefHeight="18.0" prefWidth="97.0" text="Order Quantity:" />
+      <Label fx:id="deliveryAddreeLabel" layoutX="13.0" layoutY="284.0" prefHeight="18.0" prefWidth="97.0" text="Delivery Address:" />
+      <TextField fx:id="totalPriceTextField" layoutX="103.0" layoutY="246.0" />
+      <TextField fx:id="orderQuantityTextField" layoutX="103.0" layoutY="209.0" />
+      <Label fx:id="orderIdLabel" layoutX="24.0" layoutY="91.0" prefHeight="18.0" prefWidth="97.0" text="Order ID:" />
+      <Label fx:id="buyerIdLabel" layoutX="13.0" layoutY="118.0" prefHeight="18.0" prefWidth="97.0" text="Buyer ID:" />
+      <Label fx:id="totalPriceLabel" layoutX="15.0" layoutY="241.0" prefHeight="18.0" prefWidth="97.0" text="Total Price:" />
+      <TextField fx:id="orderIdtextField" layoutX="103.0" layoutY="87.0" />
+      <TextField fx:id="buyerIdTextField" layoutX="103.0" layoutY="115.0" />
+      <TextField fx:id="deliveryAddressTextField" layoutX="103.0" layoutY="280.0" />
+      <Label fx:id="orderLabel" layoutX="347.0" layoutY="21.0" prefHeight="18.0" prefWidth="97.0" text="ORDER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="16.0" layoutY="411.0" prefHeight="200.0" prefWidth="831.0">
+        <columns>
+          <TableColumn fx:id="orderIdCol" prefWidth="73.60000801086426" text="Order ID" />
+          <TableColumn fx:id="buyerIdCol" prefWidth="70.39998626708984" text="Buyer ID" />
+            <TableColumn fx:id="batchIdCol" prefWidth="70.39999389648438" text="Batch ID" />
+            <TableColumn fx:id="speciesNameCol" prefWidth="101.60003662109375" text="Species Name" />
+            <TableColumn fx:id="orderQuantityCol" prefWidth="113.5999755859375" text="Order Quantity" />
+            <TableColumn fx:id="totalPriceCol" prefWidth="93.60000610351562" text="Toatal Price" />
+            <TableColumn fx:id="deliveryAddressCol" prefWidth="124.79998779296875" text="Delivery Address" />
+            <TableColumn fx:id="requestedDeliveryAddress" prefWidth="192.0" text="Requested Delivery Order" />
+        </columns>
+      </TableView>
+      <Line endX="565.0" layoutX="302.0" layoutY="385.0" startX="-302.0" />
+      <Label fx:id="requestedDeliveryDateLabel" layoutX="320.0" layoutY="82.0" prefHeight="18.0" prefWidth="150.0" text="Requested Delivery Date:" />
+      <DatePicker fx:id="requestedDeliveryDatePicker" layoutX="478.0" layoutY="79.0" />
+      <Button layoutX="380.0" layoutY="136.0" mnemonicParsing="false" onAction="#placeOrderMouseClick" text="Place Order" />
+      <Button layoutX="728.0" layoutY="331.0" mnemonicParsing="false" onAction="#clearMouseClick" text="Clear" />
+      <Button layoutX="419.0" layoutY="622.0" mnemonicParsing="false" onAction="#backToDashboardMouseClick" text="Back to dashboard" />
+   </children>
+</AnchorPane>
