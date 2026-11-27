@@ -1,5 +1,10 @@
 package com.example.fish_hatchery.suad_2521067.user.client;
 
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class OrderHistoryviewController
 {
     @javafx.fxml.FXML
