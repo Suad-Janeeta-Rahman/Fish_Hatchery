@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="523.0" prefWidth="771.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.ridwan_2412433.user.hatchery_manager.FeedInventoryController">
+   <children>
+      <Label layoutX="304.0" layoutY="6.0" text="Feed Inventory Management">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back to Dashboard" />
+      <Label layoutX="42.0" layoutY="57.0" text="Feed Id:" />
+      <Label layoutX="20.0" layoutY="101.0" text="Expiry Date:" />
+      <Label layoutX="223.0" layoutY="57.0" text="Feed Name:" />
+      <Label layoutX="428.0" layoutY="57.0" text="Feed Type:" />
+      <Label layoutX="229.0" layoutY="103.0" text="Available Quantity:" />
+      <Label layoutX="614.0" layoutY="57.0" text="unit:" />
+      <Label layoutX="458.0" layoutY="103.0" text="Unit Price:" />
+      <TextField fx:id="feedIdTextField" layoutX="91.0" layoutY="53.0" prefHeight="25.0" prefWidth="116.0" />
+      <TextField fx:id="unitPriceTextField" layoutX="515.0" layoutY="99.0" prefHeight="25.0" prefWidth="116.0" />
+      <TextField fx:id="feedNameTextField" layoutX="294.0" layoutY="53.0" prefHeight="25.0" prefWidth="116.0" />
+      <TextField fx:id="availableQuantityTextField" layoutX="331.0" layoutY="99.0" prefHeight="25.0" prefWidth="116.0" />
+      <ComboBox fx:id="feedTypeComboBox" layoutX="491.0" layoutY="54.0" prefHeight="25.0" prefWidth="116.0" />
+      <ComboBox fx:id="unitComboBox" layoutX="641.0" layoutY="53.0" prefHeight="25.0" prefWidth="116.0" />
+      <DatePicker fx:id="expiryDatePicker" layoutX="89.0" layoutY="97.0" prefHeight="25.0" prefWidth="122.0" />
+      <Line endX="651.0" layoutX="110.0" layoutY="177.0" startX="-100.0" />
+      <Button layoutX="663.0" layoutY="99.0" mnemonicParsing="false" onAction="#saveFeedButtonOA" prefHeight="25.0" prefWidth="94.0" text="Save Feed" />
+      <Label layoutX="28.0" layoutY="191.0" text="Feed Type:" />
+      <ComboBox fx:id="filterFeedTypeComboBox" layoutX="91.0" layoutY="188.0" prefHeight="25.0" prefWidth="116.0" />
+      <CheckBox fx:id="lowStockCheckBox" layoutX="264.0" layoutY="184.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="103.0" text="Low Stock Only" />
+      <Button layoutX="341.0" layoutY="141.0" mnemonicParsing="false" onAction="#updateFeedButtonOA" text="Update Feed" />
+      <Button layoutX="441.0" layoutY="188.0" mnemonicParsing="false" onAction="#filterButtonOA" prefHeight="25.0" prefWidth="163.0" text="Filter &amp; Load" />
+      <Button layoutX="647.0" layoutY="188.0" mnemonicParsing="false" onAction="#refreshButtonOA" prefHeight="25.0" prefWidth="103.0" text="Refresh" />
+      <TableView fx:id="feedInventoryTableView" layoutX="4.0" layoutY="243.0" prefHeight="262.0" prefWidth="761.0">
+        <columns>
+          <TableColumn fx:id="feedIdCol" prefWidth="115.0" text="Feed ID" />
+          <TableColumn fx:id="feedNameCol" prefWidth="115.0" text="Feed Name" />
+            <TableColumn fx:id="feedTypeCol" prefWidth="103.0" text="Feed Type" />
+            <TableColumn fx:id="quantityCol" prefWidth="108.0" text="Quantity" />
+            <TableColumn fx:id="unitCol" prefWidth="99.0" text="Unit" />
+            <TableColumn fx:id="unitPriceCol" prefWidth="106.0" text="Unit Price" />
+            <TableColumn fx:id="expiryDateCol" prefWidth="113.0" text="Expiry Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
