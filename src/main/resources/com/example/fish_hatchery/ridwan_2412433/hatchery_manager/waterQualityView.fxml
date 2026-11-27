@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="515.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.ridwan_2412433.user.hatchery_manager.WaterQualityController">
+   <children>
+      <Label layoutX="316.0" layoutY="7.0" text="Water Quality Monitoring">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="15.0" layoutY="10.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back to Dashboard" />
+      <Label layoutX="53.0" layoutY="56.0" text="Water Quality Id:" />
+      <Label layoutX="94.0" layoutY="93.0" text="pH Level:" />
+      <Label layoutX="555.0" layoutY="93.0" text="Water Status:" />
+      <Label layoutX="302.0" layoutY="93.0" text="Recorded Date:" />
+      <Label layoutX="340.0" layoutY="56.0" text="Pond Id:" />
+      <Label layoutX="550.0" layoutY="54.0" text="Temperature:" />
+      <TextField fx:id="waterQualityIdTextField" layoutX="153.0" layoutY="52.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextField fx:id="phLevelTextField" layoutX="153.0" layoutY="89.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextField fx:id="temperatureTextField" layoutX="629.0" layoutY="50.0" prefHeight="25.0" prefWidth="140.0" />
+      <TextField fx:id="pondIdTextField" layoutX="393.0" layoutY="52.0" prefHeight="25.0" prefWidth="140.0" />
+      <DatePicker fx:id="recordedDatePicker" layoutX="390.0" layoutY="89.0" prefHeight="25.0" prefWidth="153.0" />
+      <ComboBox fx:id="waterStatusComboBox" layoutX="629.0" layoutY="89.0" prefHeight="25.0" prefWidth="116.0" />
+      <Button layoutX="16.0" layoutY="130.0" mnemonicParsing="false" onAction="#saveWaterRecordButtonOA" prefHeight="39.0" prefWidth="226.0" text="Save Record" />
+      <Button layoutX="277.0" layoutY="130.0" mnemonicParsing="false" onAction="#updateWaterRecordButtonOA" prefHeight="39.0" prefWidth="226.0" text="Update Record" />
+      <Label layoutX="23.0" layoutY="221.0" text="Water Status:" />
+      <ComboBox fx:id="filterWaterStatusComboBox" layoutX="97.0" layoutY="217.0" prefHeight="25.0" prefWidth="116.0" />
+      <DatePicker fx:id="filterDatePicker" layoutX="242.0" layoutY="217.0" prefHeight="25.0" prefWidth="153.0" />
+      <Line endX="649.0" layoutX="118.0" layoutY="192.0" startX="-106.0" />
+      <Button layoutX="420.0" layoutY="217.0" mnemonicParsing="false" onAction="#filterButtonOA" prefHeight="39.0" prefWidth="140.0" text="Filter &amp; Load" />
+      <Button layoutX="591.0" layoutY="217.0" mnemonicParsing="false" onAction="#refreshButtonOA" prefHeight="39.0" prefWidth="140.0" text="Refresh" />
+      <TableView fx:id="waterQualityTableView" layoutX="12.0" layoutY="283.0" prefHeight="200.0" prefWidth="756.0">
+        <columns>
+          <TableColumn fx:id="waterIdCol" prefWidth="103.0" text="ID" />
+          <TableColumn fx:id="pondIdCol" prefWidth="128.0" text="Pond ID" />
+            <TableColumn fx:id="temperatureCol" prefWidth="139.0" text="Temperature" />
+            <TableColumn fx:id="phLevelCol" prefWidth="130.0" text="pH Level" />
+            <TableColumn fx:id="recordedDateCol" prefWidth="129.0" text="Recorded Date" />
+            <TableColumn fx:id="waterStatusCol" prefWidth="126.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

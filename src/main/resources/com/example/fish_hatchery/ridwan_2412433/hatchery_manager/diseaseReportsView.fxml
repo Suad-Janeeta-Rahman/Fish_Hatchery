@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="577.0" prefWidth="772.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.ridwan_2412433.user.hatchery_manager.DiseaseReportsController">
+   <children>
+      <Label layoutX="336.0" layoutY="5.0" text="Disease Reports">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#backButtonOA" text="Back to Dashboard" />
+      <Label layoutX="44.0" layoutY="56.0" text="Report Id:" />
+      <Label layoutX="533.0" layoutY="56.0" text="Pond Id:" />
+      <Label layoutX="286.0" layoutY="95.0" text="Affected Quantity:" />
+      <Label layoutX="533.0" layoutY="98.0" text="Disease Name:" />
+      <Label layoutX="44.0" layoutY="95.0" text="Batch Id:" />
+      <Label layoutX="41.0" layoutY="137.0" text="Report Date:" />
+      <Label layoutX="286.0" layoutY="56.0" text="Fish Species:" />
+      <Label layoutX="286.0" layoutY="137.0" text="Severity:" />
+      <Label layoutX="533.0" layoutY="137.0" text="Report Status:" />
+      <TextField fx:id="reportIdTextField" layoutX="108.0" layoutY="52.0" />
+      <TextField fx:id="pondIdTextField" layoutX="587.0" layoutY="52.0" />
+      <TextField fx:id="batchIdTextField" layoutX="96.0" layoutY="91.0" />
+      <TextField fx:id="affectedQuantityTextField" layoutX="390.0" layoutY="91.0" prefHeight="25.0" prefWidth="138.0" />
+      <TextField fx:id="diseaseNameTextField" layoutX="617.0" layoutY="94.0" prefHeight="25.0" prefWidth="138.0" />
+      <ComboBox fx:id="fishSpeciesComboBox" layoutX="360.0" layoutY="52.0" prefWidth="150.0" />
+      <ComboBox fx:id="severityComboBox" layoutX="336.0" layoutY="133.0" prefWidth="150.0" />
+      <ComboBox fx:id="reportStatusComboBox" layoutX="611.0" layoutY="133.0" prefWidth="150.0" />
+      <DatePicker fx:id="reportDatePicker" layoutX="110.0" layoutY="133.0" prefHeight="25.0" prefWidth="161.0" />
+      <Button layoutX="153.0" layoutY="178.0" mnemonicParsing="false" onAction="#saveReportButtonOA" prefHeight="36.0" prefWidth="138.0" text="Save Report" />
+      <Button layoutX="357.0" layoutY="178.0" mnemonicParsing="false" onAction="#updateReportButtonOA" prefHeight="36.0" prefWidth="138.0" text="Update Status" />
+      <Line endX="629.0" layoutX="130.0" layoutY="241.0" startX="-117.0" />
+      <Button layoutX="422.0" layoutY="266.0" mnemonicParsing="false" onAction="#filterButtonOA" prefHeight="36.0" prefWidth="161.0" text="Filter &amp; Load" />
+      <Button layoutX="594.0" layoutY="266.0" mnemonicParsing="false" onAction="#refreshButtonOA" prefHeight="36.0" prefWidth="161.0" text="Refresh" />
+      <Label layoutX="108.0" layoutY="258.0" text="Severity:" />
+      <ComboBox fx:id="filterSeverityComboBox" layoutX="158.0" layoutY="254.0" prefWidth="150.0" />
+      <Label layoutX="108.0" layoutY="294.0" text="Report Status:" />
+      <ComboBox fx:id="filterStatusComboBox" layoutX="186.0" layoutY="290.0" prefWidth="150.0" />
+      <TableView fx:id="diseaseTableView" layoutX="5.0" layoutY="328.0" prefHeight="200.0" prefWidth="766.0">
+        <columns>
+          <TableColumn fx:id="reportIdCol" prefWidth="86.0" text="ID" />
+          <TableColumn fx:id="speciesCol" text="Species" />
+            <TableColumn fx:id="pondIdCol" prefWidth="77.0" text="Pond ID" />
+            <TableColumn fx:id="batchIdCol" text="Batch ID" />
+            <TableColumn fx:id="affectedQtyCol" prefWidth="84.0" text="Affected Qty" />
+            <TableColumn fx:id="diseaseNameCol" prefWidth="87.0" text="Disease" />
+            <TableColumn fx:id="reportDateCol" prefWidth="94.0" text="Date" />
+            <TableColumn fx:id="severityCol" prefWidth="92.0" text="Severity" />
+            <TableColumn fx:id="statusCol" prefWidth="85.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
