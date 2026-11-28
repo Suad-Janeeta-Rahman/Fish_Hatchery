@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="364.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.sayma_2531636.user.commercial_sales_manager.StockRecordsController">
+   <children>
+      <Label fx:id="stockRecordsLabel" layoutX="209.0" layoutY="25.0" text="STOCK RECORDS">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewId" layoutX="20.0" layoutY="100.0" prefHeight="200.0" prefWidth="559.0">
+        <columns>
+          <TableColumn fx:id="speciesTableColumn" prefWidth="106.4000244140625" text="Species" />
+          <TableColumn fx:id="availableQuantityTableColumn" prefWidth="178.39996337890625" text="Available Quantity" />
+            <TableColumn fx:id="sizeTableColumn" prefWidth="145.60003662109375" text="Size" />
+            <TableColumn fx:id="lastUpdatedTableColumn" prefWidth="127.99993896484375" text="Last Updated" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

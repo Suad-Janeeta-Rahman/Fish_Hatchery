@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="494.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.sayma_2531636.user.commercial_sales_manager.OrderAvailabilityController">
+   <children>
+      <Label fx:id="orderAvailabilityVerificationLabel" layoutX="92.0" layoutY="27.0" text="ORDER AVAILABILITY VERIFICATION">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="34.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order ID :" />
+      <ComboBox fx:id="orderIdComboBox" layoutX="92.0" layoutY="80.0" prefWidth="150.0" promptText="Select order id" />
+      <Text layoutX="34.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product :" />
+      <TextField fx:id="productTextField" layoutX="93.0" layoutY="112.0" text="Enter Product" />
+      <Text layoutX="34.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requested Quantity :" />
+      <TextField fx:id="requestedQuantityTextField" layoutX="151.0" layoutY="140.0" text="Enter requested quantity" />
+      <Text layoutX="34.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Stock :" />
+      <TextField fx:id="availableStockTextField" layoutX="131.0" layoutY="179.0" text="Enter available stock" />
+      <Text layoutX="340.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability Status :" />
+      <TextField fx:id="availabilityStatusTextField" layoutX="449.0" layoutY="80.0" prefHeight="26.0" prefWidth="140.0" text="Enter availability status" />
+      <Button layoutX="408.0" layoutY="131.0" mnemonicParsing="false" onAction="#verifyAvailabilityButtonOA" text="Verify Availability " />
+      <Label fx:id="messageaLabel" layoutX="408.0" layoutY="175.0" text="Message" />
+      <Label fx:id="verificationHistoryLabel" layoutX="34.0" layoutY="219.0" text="Verification History">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewId" layoutX="25.0" layoutY="257.0" prefHeight="200.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="orderIdTableColumn" prefWidth="93.5999755859375" text="Order ID" />
+          <TableColumn fx:id="productTableColumn" prefWidth="124.800048828125" text="Product" />
+            <TableColumn fx:id="requestedTableColumn" prefWidth="148.0" text="Requested" />
+            <TableColumn fx:id="stockTableColumn" prefWidth="89.5999755859375" text="Stock" />
+            <TableColumn fx:id="statudTableColumn" prefWidth="105.60009765625" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
