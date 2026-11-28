@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.sayma_2531636.user.Incubation_Technician.JarAssignmentRecordsController">
+   <children>
+      <Label fx:id="assignmentRecordsLabel" layoutX="200.0" layoutY="22.0" text="Assignment Records">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewId" layoutX="26.0" layoutY="87.0" prefHeight="255.0" prefWidth="548.0">
+        <columns>
+          <TableColumn fx:id="batchIdTableColumn" prefWidth="128.00006103515625" text="Batch ID" />
+          <TableColumn fx:id="jarIdTableColumn" prefWidth="146.39996337890625" text="Jar ID" />
+            <TableColumn fx:id="eggCountTableColumn" prefWidth="147.199951171875" text="Egg Count " />
+            <TableColumn fx:id="statusTableColumn" prefWidth="127.199951171875" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="456.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.sayma_2531636.user.Incubation_Technician.TemperatureRecordController">
+   <children>
+      <Label fx:id="recoordWaterTemperatureLabel" layoutX="155.0" layoutY="25.0" text="Record Water Temperature">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="26.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jar ID :" />
+      <ComboBox fx:id="jarIdComboBox" layoutX="70.0" layoutY="64.0" prefWidth="150.0" promptText="Enter jar id" />
+      <Text layoutX="26.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature :" />
+      <TextField fx:id="temperatureTextField" layoutX="111.0" layoutY="96.0" text="Enter temperature" />
+      <Text layoutX="26.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reading Time :" />
+      <Button layoutX="324.0" layoutY="131.0" mnemonicParsing="false" onAction="#saveButtonOA" text="Save " />
+      <Button layoutX="400.0" layoutY="131.0" mnemonicParsing="false" onAction="#clearButtonOA" text="Clear" />
+      <TableView fx:id="tableViewId" layoutX="20.0" layoutY="228.0" prefHeight="200.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="jarIdTableColumn" prefWidth="151.9999656677246" text="Jar ID" />
+          <TableColumn fx:id="temperatureTableColumn" prefWidth="120.00001525878906" text="Temperature" />
+            <TableColumn fx:id="readingTimeTableColumn" prefWidth="116.0" text="Reading Time" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="196.800048828125" text="Status " />
+        </columns>
+      </TableView>
+      <Label fx:id="temperatureReadingRecordsLabel" layoutX="30.0" layoutY="183.0" text="Temperature Reading Records">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="readingTimeComboBox" layoutX="110.0" layoutY="131.0" prefWidth="150.0" promptText="Select reading time" />
+      <Label text="Label" />
+      <Label fx:id="messageLabel" layoutX="368.0" layoutY="166.0" text="Message" />
+   </children>
+</AnchorPane>

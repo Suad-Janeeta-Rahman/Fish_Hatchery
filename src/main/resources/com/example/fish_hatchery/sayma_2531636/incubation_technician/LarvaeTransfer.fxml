@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="474.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.sayma_2531636.user.Incubation_Technician.LarvaeTransferController">
+   <children>
+      <Label fx:id="larvaeTransferFormLabel" layoutX="143.0" layoutY="22.0" text="LARVAE TRANSFER FORM">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="38.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batch ID :" />
+      <ComboBox fx:id="batchIdComboBox" layoutX="94.0" layoutY="68.0" prefWidth="150.0" promptText="Select batch id" />
+      <Text layoutX="35.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Larvae Quantity :" />
+      <TextField fx:id="larvaeQuantityTextField" layoutX="134.0" layoutY="102.0" prefHeight="26.0" prefWidth="140.0" text="Enter larvae quantity" />
+      <Text layoutX="300.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination Tank :" />
+      <ComboBox fx:id="destinationTankComboBox" layoutX="401.0" layoutY="68.0" prefHeight="26.0" prefWidth="171.0" promptText="Select destination Tank" />
+      <Text layoutX="300.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transfer Date :" />
+      <DatePicker fx:id="transferDateDatePicker" layoutX="381.0" layoutY="110.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button layoutX="191.0" layoutY="146.0" mnemonicParsing="false" onAction="#saveTransferButtonOA" text="Save Transfer" />
+      <Button layoutX="287.0" layoutY="146.0" mnemonicParsing="false" onAction="#clearButtonOA" text="Clear" />
+      <Label fx:id="messageLabel" layoutX="250.0" layoutY="183.0" text="Message" />
+      <Label fx:id="transferHistoryLabel" layoutX="38.0" layoutY="210.0" text="Transfer History">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewId" layoutX="38.0" layoutY="253.0" prefHeight="200.0" prefWidth="594.0">
+        <columns>
+          <TableColumn fx:id="transferIdTableColumn" prefWidth="75.0" text="Transfer ID" />
+          <TableColumn fx:id="batchIdTableColumn" prefWidth="75.0" text="Batch ID" />
+            <TableColumn fx:id="quantityTableColumn" prefWidth="73.60003662109375" text="Quantity" />
+            <TableColumn fx:id="destinationTankTableColumn" prefWidth="119.20001220703125" text="Destination Tank" />
+            <TableColumn fx:id="transferDateTableColumn" prefWidth="95.199951171875" text="Transfer Date" />
+            <TableColumn fx:id="remainingLarvaeTableColumn" prefWidth="155.99990844726562" text="Remaining Larvae" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

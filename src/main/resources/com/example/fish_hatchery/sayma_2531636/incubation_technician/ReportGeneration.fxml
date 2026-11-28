@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.sayma_2531636.user.Incubation_Technician.ReportGenerationController">
+   <children>
+      <Label fx:id="incubationPerformanceReportLabel" layoutX="60.0" layoutY="39.0" text="INCUBATION PERFORMANCE REPORT">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="23.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Type :" />
+      <ComboBox fx:id="reportTypeComboBox" layoutX="99.0" layoutY="93.0" prefWidth="150.0" promptText="Select Report Type " />
+      <Text layoutX="23.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date :" />
+      <DatePicker fx:id="startDateDatePicker" layoutX="87.0" layoutY="129.0" />
+      <Text layoutX="23.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date :" />
+      <DatePicker fx:id="endDateDatePicker" layoutX="89.0" layoutY="163.0" prefHeight="26.0" prefWidth="161.0" />
+      <Button layoutX="346.0" layoutY="163.0" mnemonicParsing="false" onAction="#generateReportButtonOA" text="Generate Report" />
+      <Button layoutX="461.0" layoutY="162.0" mnemonicParsing="false" onAction="#clearButtonOA" text="Clear" />
+      <Label fx:id="messageLabel" layoutX="437.0" layoutY="200.0" text="Message" />
+      <Label fx:id="incubationPerformanceSummaryLabel" layoutX="23.0" layoutY="226.0" text="Incubation Performance Summary ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="284.0" />
+      <Label fx:id="batchRegistrationLabel" layoutX="23.0" layoutY="276.0" text="Batch Registration" />
+      <Label fx:id="averageTemperatureLabel" layoutX="262.0" layoutY="276.0" text="Average Temperature " />
+      <Label fx:id="averageOxygenLevelLabel" layoutX="23.0" layoutY="310.0" text="Average Oxygen Level" />
+      <Label fx:id="totalMortalityLabel" layoutX="262.0" layoutY="310.0" text="Total Mortality" />
+      <Label fx:id="hatchSuccessRationLabel" layoutX="23.0" layoutY="348.0" text="Hatch Success Ratio" />
+      <Label fx:id="larvaeTransferLabel" layoutX="262.0" layoutY="348.0" text="Larvae Transfer" />
+   </children>
+</AnchorPane>

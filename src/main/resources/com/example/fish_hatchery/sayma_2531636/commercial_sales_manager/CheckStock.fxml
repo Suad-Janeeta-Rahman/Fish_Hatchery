@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fish_hatchery.sayma_2531636.user.commercial_sales_manager.CheckStockController">
+   <children>
+      <Label fx:id="checkStockLabel" layoutX="205.0" layoutY="14.0" text="CHECK STOCK">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text layoutX="24.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter By Species :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="24.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter By Size :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="189.0" layoutY="187.0" mnemonicParsing="false" onAction="#checkStockButtonOA" text="Check Stock" />
+      <Button layoutX="300.0" layoutY="187.0" mnemonicParsing="false" onAction="#clearFilterButtonOA" text="Clear Filter" />
+      <Label fx:id="availableQuantityLabel" layoutX="222.0" layoutY="228.0" text="Available Quantity" />
+      <Button layoutX="429.0" layoutY="342.0" mnemonicParsing="false" onAction="#viewStockRecordsButtonOA" text="View Stock Records" />
+      <ComboBox fx:id="filterBySpeciesComboBox" layoutX="167.0" layoutY="73.0" prefWidth="150.0" />
+      <ComboBox fx:id="filterBySizeComboBox" layoutX="146.0" layoutY="113.0" prefHeight="26.0" prefWidth="136.0" />
+   </children>
+</AnchorPane>
